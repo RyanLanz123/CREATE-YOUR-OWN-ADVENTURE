@@ -6,8 +6,27 @@ answer = input("You are on a dirt road, it has come to and you can go left or ri
 if answer == "left":
     answer = input("You come to a river, you can walk around it or swin accross? Type walk to walk around and swim to swim across: ")
 
+    if answer == "swim":
+        print("You swam across and were eaten by an alligator")
+    elif answer == "walk":
+        print("You walked for many miles, ran out of water and lost the game")
+    else:
+        print("Not a valid option, you lose")
+
 elif answer == "right":
-    print()
+    answer = input("You come to a brige, it looks wobbly, do you want to cross or go back? (cross/back)")
+
+    if answer == "back":
+        answer = input("You go back and lose")
+    elif answer == "cross":
+        answer = input("You cross teh bridge and meet a stranger, do you talk to them (yes/no)")
+        
+        if answer == "yes":
+            print("You talk to the stranger and they give you gold, you win!")
+        elif answer == "no":
+            print("You ignore the stranger and they are offended, you lose")
+    else:
+        print("Not a valid option, you lose")
 
 else:
     print("Not a valid option, you lose")
